@@ -18,14 +18,18 @@ function findsumpairs(sum, numbers)
     addends = {}
     --find pairs in hashtable that sum to target
     for index, value in pairs(hashTable) do
-        if hashTable[sum-index] then print(index.." + "..sum-index.." = sum")
-            addends[index] = sum-index
-        end
+        if hashTable[sum-index] then addends[index] = sum-index end
     end
     return addends
 end
 
-addends = findsumpairs(5, {'2', '3', '6', '1', '4'})
-for i, v in pairs(addends) do
-    print(i.." and "..v)
+for i, v in ipairs(input) do
+if i > 25 then
+    prevnumbers = {}
+    --load 25 previous values of input
+    for j=-25,-1 do prevnumbers[j+26] = input[i+j] end
+
+    sumpairs = findsumpairs(v, prevnumbers)
+    if next(sumpairs) == nil then print(v) os.exit() end
+end
 end
