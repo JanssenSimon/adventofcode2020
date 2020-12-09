@@ -30,6 +30,7 @@ if i > 25 then
     for j=-25,-1 do prevnumbers[j+26] = input[i+j] end
 
     sumpairs = findsumpairs(v, prevnumbers)
-    if next(sumpairs) == nil then print(v) os.exit() end
+    --print the first element not to have addends in the previous 25 elements
+    if next(sumpairs) == nil then print("Invalid number: "..v) os.exit() end
 end
 end
