@@ -9,7 +9,15 @@ open("input", function(line) table.insert(input, tonumber(line)) end)
 table.sort(input)
 
 
---do the code
-for k, v in ipairs(input) do
-    print(k.." "..v)
+differencesofthreecount = 1 --starts at one for device to final adapter
+differencesofonecount = 1 --starts at one for wall to first adapter
+for index, joltage in ipairs(input) do
+    if index > 1 then
+        if joltage - input[index-1] == 1 then
+            differencesofonecount = differencesofonecount + 1
+        elseif joltage - input[index-1] == 3 then 
+            differencesofthreecount = differencesofthreecount + 1
+        end
+    end
 end
+print("When using every adapter, the product of the number of differences of three and the number of differences of one is "..differencesofthreecount * differencesofonecount)
