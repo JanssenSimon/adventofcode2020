@@ -14,7 +14,6 @@ open("input", function(line) table.insert(input, toarray(line)) end)
 
 
 function getsumofsurrounding(li, i, state)
-    state = state or input
     sumofsurrounding = 0
     if state[li-1] then
         if state[li-1][i-1] and state[li-1][i-1] == "#" then 
