@@ -1,0 +1,17 @@
+t=  0 mod  23
+t= 28 mod  41
+t= 20 mod  37
+t=456 mod 479
+t=  3 mod  13
+t= 11 mod  17
+t=  6 mod  29
+t=319 mod 373
+t=  3 mod  19
+
+when the chinese remainder theorem is applied in groups of 3
+t= 22701 mod 34891
+t=105836 mod 105859
+t=113338 mod 205523
+
+when the chinese remainder theorem is applied again
+t=539746751134958 mod 750104619935980
