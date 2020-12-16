@@ -1,0 +1,23 @@
+1  price
+2  train
+3  duration
+4  seat
+5  arrival location
+6  departure location
+7  arrival track
+8  zone
+9  arrival station
+10 route
+11 departure date
+12 arrival platform
+13 row
+14 departure track
+15 wagon
+16 type
+17 class
+18 departure platform
+19 departure station
+20 departure time
+
+product of all of the 'departure' fields of own ticket is
+157*151*83*149*79*137=3173135507987
