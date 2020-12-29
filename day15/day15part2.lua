@@ -1,31 +1,21 @@
 history = {}
 
 --puzzle input, starting numbers
-table.insert(history, 10)
-table.insert(history, 16)
-table.insert(history, 6)
-table.insert(history, 0)
-table.insert(history, 1)
-table.insert(history, 17)
+history[10] = 1
+history[16] = 2
+history[6] = 3
+history[0] = 4
+history[1] = 5
+history[17] = 6
 
 
-while #history ~= 30000000 do
-    lastelem = history[#history]
-    notunique = false
-    lastindex = 1
-    for i, elem in ipairs(history) do
-        if elem == lastelem and i ~= #history then
-            --print("I've seen "..elem.." before at "..i)
-            notunique = true
-            lastindex = i
-        end
-    end
-    if notunique then table.insert(history, #history-lastindex)
-    else table.insert(history, 0) end
-    print(#history)
+turn = 7
+unique = true
+difference = 0
+while turn <= 30000000 do
+    elem = difference
+    difference = history[elem] and (turn - history[elem]) or 0
+    history[elem] = turn
+    turn = turn + 1
+    print(elem)
 end
-
---for i, elem in ipairs(history) do
---    print(i.." "..elem)
---end
-print(history[#history])
