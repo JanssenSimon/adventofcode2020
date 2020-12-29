@@ -27,3 +27,4 @@ end
 for i, elem in ipairs(history) do
     print(i.." "..elem)
 end
+print(history[#history])
